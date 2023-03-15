@@ -1,0 +1,14 @@
+.side-bar-container {
+    padding: 20px;
+}
+.side-bar-title {
+    margin-bottom: 20px;
+}
+.side-bar-sample-list {
+    display: flex;
+    flex-direction: column;
+}
+.side-bar-sample-list button {
+    margin: 3px 0px;
+    padding: 5px 7px;
+}
