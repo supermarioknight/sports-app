@@ -1,0 +1,47 @@
+.cross-boundary-node-container {
+  min-width: 200px;
+  min-height: 100px;
+  background-color: white;
+  border: 1px solid #0e024a;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.cross-boundary-node-content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.cross-boundary-node-content-wrapper .node-body {
+  margin: 10px 5px;
+}
+
+.cross-boundary-node-content-wrapper .node-header .node-title {
+  background-color: #e3e3e3;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 1px 5px;
+}
+
+.cross-boundary-node-content-wrapper .node-field {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.node-field .action-field {
+  display: flex;
+  flex-direction: row;
+}
+
+.cross-boundary-node-content-wrapper .node-field .action-field-option {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.cross-boundary-node-content-wrapper .node-field .action-field-option label,
+.cross-boundary-node-content-wrapper .node-field .action-field-option input {
+  vertical-align: middle;
+}
