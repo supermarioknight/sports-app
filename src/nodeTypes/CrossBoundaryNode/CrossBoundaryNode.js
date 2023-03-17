@@ -20,7 +20,6 @@ const CrossBoundaryNode = ({ id }) => {
       [name]: value,
     };
     setNodeFormData(updatedNodeFormData);
-    console.debug(updatedNodeFormData);
     dispatch(updateNode({ info: updatedNodeFormData, nodeId: id }));
   };
 
