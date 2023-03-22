@@ -1,2 +1,4 @@
-export const SAVE_NODE = 'SAVE_NODE';
-export const UPDATE_NODE = 'UPDATE_NODE';
+export const SAVE_NODE = "SAVE_NODE";
+export const UPDATE_NODE = "UPDATE_NODE";
+
+export const UPDATE_NODE_POSITION = "UPDATE_NODE_POSITION";

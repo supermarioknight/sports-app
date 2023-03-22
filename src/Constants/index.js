@@ -1,6 +1,9 @@
 export const baseActivities = [
   {
-    data: { label: "Team Sports Ball Games" },
+    data: {
+      label: "Team Sports Ball Games",
+    },
+    type: "TEAM_SPORTS_BALL_GAME",
   },
   {
     data: { label: "1v1 Sports Ball Games" },
@@ -14,11 +17,11 @@ export const baseActions = [
       options: [
         {
           data: { label: "Deliver" },
-          type: "deliverNode",
+          type: "DELIVER",
         },
         {
           data: { label: "recieve" },
-          type: "receiveNode",
+          type: "RECEIVE",
         },
       ],
     },
@@ -29,7 +32,18 @@ export const baseActions = [
       options: [
         {
           data: { label: "Cross Boundry" },
-          type: "crossBoundaryNode",
+          type: "CROSS_BOUNDARY",
+        },
+      ],
+    },
+  },
+  {
+    data: {
+      label: "Blocking Actions",
+      options: [
+        {
+          data: { label: "Block" },
+          type: "BLOCK",
         },
       ],
     },

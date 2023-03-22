@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import { baseActions, baseActivities } from "../../Constants";
-import { downloadFile, makeEvents } from "../../Utils";
+import { downloadFile, makeReportJson } from "../../Utils";
 
 import "./side-bar.css";
 
@@ -10,14 +10,14 @@ const SideBar = ({ onAddNode }) => {
   const nodeList = useSelector((state) => state.events.nodes);
 
   const handleNodeSelect = (newNode) => {
-    onAddNode(newNode);
+    const nodeId = `${nodeList.length + 1}`;
+    onAddNode({...newNode, id: nodeId });
   };
 
   const makeNodeList = (actions) => {
     return actions.map((node) => {
-      const nodeId = `${nodeList.length + 1}`;
       return (
-        <button onClick={() => handleNodeSelect({ ...node, id: nodeId })}>
+        <button onClick={() => handleNodeSelect(node)}>
           {node.data.label}
         </button>
       );
@@ -26,9 +26,9 @@ const SideBar = ({ onAddNode }) => {
 
   const exportToJson = (e) => {
     e.preventDefault();
-    const builtEvents = makeEvents(nodeList);
+    const builtJsonReport = makeReportJson(nodeList);
     downloadFile({
-      data: JSON.stringify({ events: builtEvents }),
+      data: JSON.stringify({ report: builtJsonReport }),
       fileName: "events.json",
       fileType: "text/json",
     });
